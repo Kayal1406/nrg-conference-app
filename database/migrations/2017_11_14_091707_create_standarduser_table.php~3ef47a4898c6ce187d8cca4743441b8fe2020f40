@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateStandarduserTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('standarduser', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('useremail');
+            $table->string('manager_firstname');
+            $table->string('manager_lastname');
+            $table->string('manager_email');
+            $table->string('created_by');
+            $table->timestamp('created_date');
+            $table->string('modified_by');
+            $table->dateTime('modified_date');
+            $table->boolean('is_delete')->default('0');
+            $table->string('another_phone');
+            $table->string('another_email');
+            $table->string('manager');
+            $table->string('phone');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('standarduser');
+    }
+}

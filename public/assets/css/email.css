@@ -1,0 +1,12 @@
+.container{
+	margin-left: 350px;
+	margin-top: 150px;
+	margin-bottom: 100px;
+	background: #f0f0f0;
+	width: 500px;
+	height: 300px;
+	color: #EE82EE;
+	font: bold;
+	font-size: 250%;
+	text-align: center;
+}
